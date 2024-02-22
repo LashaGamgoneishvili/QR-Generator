@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code</title>
+  <link rel='stylesheet' href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" href="QR-img.png">
+  <script type="text/javascript" src="index.js" defer></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <h2 onclick="location.reload()" style="cursor: pointer;">QR code Generator
+  </h2>
+
+  <div class="container">
+    <h1>QR code Generator</h1>
+    <p>QR code allow smartphone users to accsces your website simply and
+      quickly.
+    </p>
+    <p>Enter your URL below to generate a QR code and download the image
+    </p>
+    <form class="input-field">
+      <input type="url" id="URL" name="link"
+        placeholder="Enter Text or URL"><br>
+      <select id="size" aria-label="state">
+        <option value="100">100x100</option>
+        <option value="150" selected>150x150</option>
+        <option value="200">200x100</option>
+        <option value="250">250x250</option>
+        <option value="300">300x300</option>
+        <option value="400">400x400</option>
+        <option value="500">500x500</option>
+      </select>
+    </form>
+    <div id="imgBox">
+      <img src="" alt="" id="qrImage">
+    </div>
+    <div class="spiner">
+      <svg class="svg" width="24" height="24" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .spinner_z9k8 {
+            transform-origin: center;
+            animation: spinner_StKS .75s infinite linear
+          }
+
+          @keyframes spinner_StKS {
+            100% {
+              transform: rotate(360deg)
+            }
+          }
+        </style>
+        <path
+          d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"
+          opacity=".25" />
+        <path
+          d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z"
+          class="spinner_z9k8" />
+      </svg>
+      </rect>
+      <span>Loading...</span>
+    </div>
+    <button onclick="generateQR()">Generate QR Code</button>
+    <button class="download">Download QR Code</button>
+  </div>
+</body>
+
+</html>

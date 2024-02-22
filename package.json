@@ -1,0 +1,15 @@
+{
+  "name": "qr-gene",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.js",
+    "build": "parcel build index.js"
+  },
+  "author": "Lasha Gamgoneishvili",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}
